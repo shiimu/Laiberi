@@ -1,13 +1,24 @@
 from pymongo import MongoClient,ALL
 
-#COULD REDUCE THIS WITHOUT THE REPETITION!!!
-
+# COULD REDUCE THIS WITHOUT THE REPETITION!!!
+# ADD A STRING VARIABLE TO COLLECTION.FIND({VARIABLE_HERE}) SO IT CAN HELP WITH SEARCHING THE RIGHT BOOK
+#"Name": "Web security for developers"
+inputReturn = '"Web security for developers"'
+# Function to find a book by a name
+def findByName():
+    name = '"Name"'
+    # bookHeading should be a returned input.
+    bookHeading = inputReturn
+    global nameSearch
+    nameSearch = name + ' : ' + bookHeading
+    print(nameSearch)
+    # nameSearch returns an error ATM! must fix!!
 # Retrieve available books from the database
 def retrieveAvailable():
     client = MongoClient('localhost', 27017)
     db = client['Libari']
     collection = db['booksAvail']
-    retrieved = list(collection.find({}, {'_id' : False}))
+    retrieved = list(collection.find({nameSearch}, {'_id' : False}))
     print(retrieved)
 
 # Retrieve borrowed books from the database

@@ -8,9 +8,11 @@ app = Flask(__name__)
 @app.route("/")
 def index():
 # Retrieves are imported for testing
-    from accessDatabase import retrieveAvailable,retrieveBorrowed
+    from accessDatabase import retrieveAvailable,retrieveBorrowed,findByName
+    findByName()
     retrieveAvailable()
     retrieveBorrowed()
+
     return "Allooo"
 
 @app.route("/borrow")
