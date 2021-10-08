@@ -1,0 +1,12 @@
+api - get, post, delete, put
+mongoDB - libari
+
+implicit coding
+
+
+if borrowed:
+	try:
+		write borrowed
+		delete available
+	except: return"Error message"
+

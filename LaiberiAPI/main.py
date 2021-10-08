@@ -43,6 +43,7 @@ class Name(Resource):
             'ISBN' : args['isbn'],
             'Rating' : args['rating'],
             'About' : args['about'],
+            'Tags' : args['tags'],            
             'Description' : args['description']        
         })    
         retrieved = list(collection.find({}, {'_id' : False}))
