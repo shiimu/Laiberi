@@ -23,13 +23,14 @@ def addAvail():
     client = MongoClient('localhost', 27017)
     db = client['Libari']
     collection = db['booksAvail']
-    collection.insert("Bookname")
+    collection.insert(bookName(name))
 # Add to borrowed books database
 def addBorrow():
+    from borrowSys import bookName
     client = MongoClient('localhost', 27017)
     db = client['Libari']
     collection = db['booksBorrow']
-    collection.insert("Bookname")
+    collection.insert(bookName(name))
 
 # Remove from available database
 def removeAvail():

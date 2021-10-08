@@ -1,4 +1,6 @@
-
+# Function for stating the name of the book
+def bookName(name):
+    name = "baabab"
 # Function for borrowing a book
 # Importing from accessDatabase to add and remove books
 def borrowBook():

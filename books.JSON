@@ -1,0 +1,79 @@
+{
+
+    "Web security for developers": {
+        "Name": "Web security for developers",
+        "Writer": "Malcolm MCDonald",
+        "Year": "2020",
+        "ISBN": "978-1-59327-994-3",
+        "Rating": "4.4/5 out of 50",
+        "About": "Networking & Cloud Computing",
+        "Tags": "tags",
+        "Description": "ksl"
+    },
+    
+    "Eloquent Javascript": {
+        "Name": "Eloquent Javascript",
+        "Writer": "Marjin Haverbeke",
+        "Year": "2011",
+        "ISBN": "978-1-59327-950-9",
+        "Rating": "4.6/5 out of 1049",
+        "About": "Web Development & Design (Javascript)",
+        "Tags": "tags",
+        "Description": "ksl"
+    },
+    
+    "Don't make me think": {
+        "Name": "Don't make me think: A common sense approuch to web usability, 2nd Edition",
+        "Writer": "Steve Krug",
+        "Year": "2000",
+        "ISBN": "978-0-321-96551-6",
+        "Rating": "4.5/5 out of 731",
+        "About": "Web Development & Design",
+        "Tags": "tags",
+        "Description": "ksl"
+    },
+    
+    "A smarter way to learn Javascript": {
+        "Name": "A smarter way to learn Javascript: The new approach that uses technology to cut your effort in half",
+        "Writer": "Mark Myers",
+        "Year": "2014",
+        "ISBN": "978-1-49740-818-0",
+        "Rating": "4.6/5 out of 2474",
+        "About": "Computers % Technology (Javascript)",
+        "Tags": "tags",
+        "Description": "ksl"
+    },
+    
+    "CSS in depth": {
+        "Name": "CSS in depth",
+        "Writer": "Keith Grant",
+        "Year": "2018",
+        "ISBN": "978-1-61729-345-0",
+        "Rating": "4.9/5 out of 60",
+        "About": "Programming (CSS)",
+        "Tags": "tags",
+        "Description": "ksl"
+    },
+    
+    "Head First Design Patterns": {
+        "Name": "Head First Design Patterns: Building Extensible and Maintainable Object-Oriented Software 2nd Edition",
+        "Writer": "Eric Freeman & Elizabeth Robson",
+        "Year": "2020",
+        "ISBN": "978-1-49207-800-5",
+        "Rating": "4.8/5 out of 217",
+        "About": "Programming",
+        "Tags": "tags",
+        "Description": "ksl"
+    },
+    
+    "Head First Java": {
+        "Name": "Head First Java: 2nd Edition",
+        "Writer": "Kathy Sierra & Bert Bates",
+        "Year": "2005",
+        "ISBN": "978-0-59600-920-5",
+        "Rating": "4.5/5 out of 1601",
+        "About": "Programming (Java)",
+        "Tags": "tags",
+        "Description": "ksl"
+    }
+    }
