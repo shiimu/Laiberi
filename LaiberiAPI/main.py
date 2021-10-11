@@ -10,7 +10,7 @@ def index():
 
     return "Allooo"
 
-
+# Class for interacting with available books collection
 class Available(Resource):
     def get(self):
         client = MongoClient('localhost', 27017)
@@ -21,6 +21,7 @@ class Available(Resource):
         return retrieved, 200
 
     def post(self):
+        # Require these args for the POST request.
         parser = reqparse.RequestParser()
         parser.add_argument('name', required = True)
         parser.add_argument('writer', required = True)
@@ -53,6 +54,8 @@ class Available(Resource):
         return 401
 
     def delete(self):
+    # Require these args for the DELETE request.
+
         parser = reqparse.RequestParser()
         parser.add_argument('name', required = True)
         parser.add_argument('writer', required = True)
@@ -82,7 +85,7 @@ class Available(Resource):
 
     def push(self):
         return 401
-
+# Class for interacting with borrowed books collection
 class Borrowed(Resource):
     def get(self):
         client = MongoClient('localhost', 27017)
@@ -93,6 +96,8 @@ class Borrowed(Resource):
         return retrieved, 200
 
     def post(self):
+    # Require these args for the POST request.
+
         parser = reqparse.RequestParser()
         parser.add_argument('name', required = True)
         parser.add_argument('writer', required = True)
@@ -125,6 +130,8 @@ class Borrowed(Resource):
         return 401
 
     def delete(self):
+       # Require these args for the DELETE request.
+
         parser = reqparse.RequestParser()
         parser.add_argument('name', required = True)
         parser.add_argument('writer', required = True)
