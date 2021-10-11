@@ -53,14 +53,21 @@ class Name(Resource):
         return 401
 
     def delete(self):
-# WORK ON THIS!!! DELETE THE WHOLE DOCUMENT NOT SOME STRINGS
         parser = reqparse.RequestParser()
+        parser.add_argument('name', required = True)
+        parser.add_argument('writer', required = True)
+        parser.add_argument('year', required = True)
+        parser.add_argument('isbn', required = True)
+        parser.add_argument('rating', required = True)
+        parser.add_argument('about', required = True)
+        parser.add_argument('tags', required = True)
+        parser.add_argument('description', required = True)
         args = parser.parse_args()
 
         client = MongoClient('localhost', 27017)
         db = client['Libari']
         collection = db['booksAvail']
-        removeBook = collection.delete_one({
+        removeBook = collection.find_one_and_delete({
             'Name' : args['name'],
             'Writer' : args['writer'],
             'Year' : args['year'],
