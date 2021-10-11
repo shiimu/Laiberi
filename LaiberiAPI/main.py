@@ -107,6 +107,8 @@ class Borrowed(Resource):
         parser.add_argument('about', required = True)
         parser.add_argument('tags', required = True)
         parser.add_argument('description', required = True)
+        parser.add_argument('borrower', required = True)
+
 
         args = parser.parse_args()
 
@@ -121,7 +123,9 @@ class Borrowed(Resource):
             'Rating' : args['rating'],
             'About' : args['about'],
             'Tags' : args['tags'],            
-            'Description' : args['description']        
+            'Description' : args['description'],  
+            'Borrower' : args['borrower']        
+      
         })    
         retrieved = list(collection.find({}, {'_id' : False}))
         return retrieved, 200
@@ -141,6 +145,8 @@ class Borrowed(Resource):
         parser.add_argument('about', required = True)
         parser.add_argument('tags', required = True)
         parser.add_argument('description', required = True)
+        parser.add_argument('borrower', required = True)
+
         args = parser.parse_args()
 
         client = MongoClient('localhost', 27017)
@@ -153,7 +159,8 @@ class Borrowed(Resource):
             'ISBN' : args['isbn'],
             'Rating' : args['rating'],
             'About' : args['about'],
-            'Description' : args['description']        
+            'Description' : args['description'],
+            'Borrower' : args['borrower']        
         })    
         retrieved = list(collection.find({}, {'_id' : False}))
         return retrieved, 200
@@ -165,6 +172,6 @@ class Borrowed(Resource):
 api.add_resource(Available, '/available')
 api.add_resource(Borrowed, '/borrowed')
 
-
+# Runs on port 8080!!
 if __name__ == "__main__":
-    app.run( debug = True )
+    app.run( debug = True, host='127.0.0.1', port=8080 )
